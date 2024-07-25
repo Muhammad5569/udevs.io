@@ -6,10 +6,10 @@ import { link } from 'fs'
 import Button from './Button'
 const Header = () => {
   return (
-    <nav className='navbar border-b border-blue-600'>
+    <nav className='navbar border-b border-blue-100'>
       <div className='flexBetween container h-16'>
         <Link href="/">
-          <Image src='./next.svg' alt='logo' width={74 } height={20} />
+          <Image src='./logo.svg' alt='logo' width={95 } height={30} />
         </Link>
         <ul className='hidden h-full gap-12 lg:flex'>
           {Nav_links.map((link) =>(
