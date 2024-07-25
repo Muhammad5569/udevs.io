@@ -7,9 +7,9 @@ import Button from './Button'
 const Header = () => {
   return (
     <nav className='navbar border-b border-blue-600'>
-      <div className='flexBetween container h-24'>
+      <div className='flexBetween container h-16'>
         <Link href="/">
-          <Image src='./next.svg' alt='logo' width={74} height={29} />
+          <Image src='./next.svg' alt='logo' width={74 } height={20} />
         </Link>
         <ul className='hidden h-full gap-12 lg:flex'>
           {Nav_links.map((link) =>(

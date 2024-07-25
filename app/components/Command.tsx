@@ -1,9 +1,11 @@
+'use client'
 import Image from "next/image"
+import React, { useRef } from "react"
 
 const Command = () => {
-  
+  const commandRef = useRef(null)
   return (
-    <div id='Command' className="bg-blue-50">
+    <div id='command' ref={commandRef} className="bg-blue-50">
       <div className='container'>
         <div className="py-20">
           <h1 className='title'>Team</h1>

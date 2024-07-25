@@ -8,7 +8,7 @@ const Direction = () => {
     <div id='direction' ref={directionRef}>
       <div className='container'>
         <div className='py-24'>
-          <main className="mx-auto mt-16">
+          <main className="mx-auto">
             <ServicesCard />
           </main>
         </div>
