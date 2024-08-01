@@ -12,7 +12,7 @@ const Services = () => {
       <ERPSystem/>
       <UserIX/>
       <ITconsulting/>
-      <Optimazation/>
+      {/* <Optimazation/> */}
     </>
     
   )

@@ -15,10 +15,10 @@ export default function Home() {
       <Direction />
       <Command/>
       <Services/>
-      <Tools/>
+      {/* <Tools/>
       <Clients/>
       <Portfolio/>
-      <Contact/>
+      <Contact/> */}
     </main>
   );
 }
