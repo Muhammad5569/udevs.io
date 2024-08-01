@@ -3,18 +3,18 @@ import React from 'react'
 
 const UserIX = () => {
   const cards = [
-    {title:'UX', alt:'ux', src:'UX.svg'},
-    {title:'UI', alt:'ui', src:'UI.svg'},
-    {title:'Prototyping', alt:'prototyping', src:'Prototyping.svg'},
-    {title:'Mobile Design', alt:'mobile', src:'Mobile.svg'},
-    {title:'Web design', alt:'web', src:'Web.svg'},
-    {title:'Atomic design', alt:'atomic', src:'Atomic.svg'}
+    {id: '1', title:'UX', alt:'ux', src:'UX.svg'},
+    {id: '2', title:'UI', alt:'ui', src:'UI.svg'},
+    {id: '3', title:'Prototyping', alt:'prototyping', src:'Prototyping.svg'},
+    {id: '4', title:'Mobile Design', alt:'mobile', src:'Mobile.svg'},
+    {id: '5', title:'Web design', alt:'web', src:'Web.svg'},
+    {id: '6', title:'Atomic design', alt:'atomic', src:'Atomic.svg'}
   ]
   const texnoCards = [
-    {key:'4', title:'Figma', alt:'figma', scr:'/Figma.svg'},
-    {key:'5', title:'Sketch', alt:'sketch', scr:'/Sketch.svg'},
-    {key:'6', title:'Lottie', alt:'lottie', scr:'/Lottie.svg'},
-    {key:'7', title:'Illustrator', alt:'illustrator', scr:'/Illustrator.svg'}
+    {id: '7', title:'Figma', alt:'figma', src:'/Figma.svg'},
+    {id: '8', title:'Sketch', alt:'sketch', src:'/Sketch.svg'},
+    {id: '9', title:'Lottie', alt:'lottie', src:'/Lottie.svg'},
+    {id: '10', title:'Illustrator', alt:'illustrator', src:'/Illustrator.svg'}
   ]
   return (
     <div>
@@ -23,9 +23,10 @@ const UserIX = () => {
         <div className='flex'>
           <div className='w-1/2 pr-16'>
             <p className='text-2xl text-gray-700 py-4 leading-10'>Our company takes a human-centered approach to design</p>
+            
             <div className='grid grid-cols-3 gap-4'>
-              {cards.map((card, index)=>(
-                <div key={index} className='bg-blue-50 rounded flex flex-col'>
+              {cards.map(card => (
+                <div key={card.id} className='bg-blue-50 rounded flex flex-col'> {/* Highlight: key={card.id} */}
                   <Image className='m-2'
                          src={card.src}
                          alt={card.alt}
@@ -35,14 +36,28 @@ const UserIX = () => {
                 </div>
               ))}
             </div>
+            
+            <div className='grid grid-cols-3 gap-4 mt-8'>
+              {cards.map(card => (
+                <div key={card.id} className='bg-blue-50 rounded flex flex-col'> {/* Highlight: key={card.id} */}
+                  <Image className='m-2'
+                         src={card.src}
+                         alt={card.alt}
+                         width={60}
+                         height={60}/>
+                  <p className='m-2 text-base font-semibold text-gray-700'>{card.title}</p>
+                </div>
+              ))}
+            </div>
+            
             <h1 className='py-8 text-3xl text-gray-700 font-semibold'>Technologies</h1>
             <div className='flex space-x-4 '>
-              {texnoCards.map((card =>(
-                <div key={card.key} className='w-1/3 h-20 rounded'>
-                  <Image className='m-2' src={card.scr} alt={card.alt} width={60} height={60}/>
+              {texnoCards.map(card => (
+                <div key={card.id} className='w-1/3 h-20 rounded'> {/* Highlight: key={card.id} */}
+                  <Image className='m-2' src={card.src} alt={card.alt} width={60} height={60}/>
                   <p className='m-2 text-xl'>{card.title}</p>
                 </div>
-              )))}
+              ))}
             </div>
           </div>
           <div className='w-1/2 relative'>
