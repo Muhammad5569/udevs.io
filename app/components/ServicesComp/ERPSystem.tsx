@@ -35,8 +35,8 @@ const ERPSystem = () => {
             <div className='w-1/2 pl-8'>
                <p className='text-2xl text-gray-700 py-4 leading-10'>IT Systems of any level of complexity at a convenient time for you</p>
                <div className='grid grid-cols-3 gap-6'>
-                  {cards.map((card)=>(
-                    <div className='bg-blue-100 rounded-2xl flex flex-col'>
+                  {cards.map((card, index)=>(
+                    <div key={index} className='bg-blue-100 rounded-2xl flex flex-col'>
                       <Image  className='p-2' src={card.src} alt={card.alt} height={60} width={60}/>
                       <p className='text-xl w-full p-4'>{card.title}</p>
                     </div>

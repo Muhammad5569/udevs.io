@@ -18,8 +18,8 @@ const ITconsulting = () => {
             <div className='w-1/2 pr-16'>
               <p className='text-2xl text-gray-700 py-4 leading-10'>We can improve the qualifications of your employees thereby increasing the efficiency of your company</p>
               <div className='grid grid-cols-3 gap-6'>
-                  {cards.map((card)=>(
-                    <div className='bg-blue-100 rounded-2xl flex flex-col'>
+                  {cards.map((card, index)=>(
+                    <div key={index} className='bg-blue-100 rounded-2xl flex flex-col'>
                       <Image  className='p-2' 
                               src={card.src} 
                               alt={card.alt} 

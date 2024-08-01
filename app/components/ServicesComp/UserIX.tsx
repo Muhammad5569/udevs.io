@@ -24,8 +24,8 @@ const UserIX = () => {
           <div className='w-1/2 pr-16'>
             <p className='text-2xl text-gray-700 py-4 leading-10'>Our company takes a human-centered approach to design</p>
             <div className='grid grid-cols-3 gap-4'>
-              {cards.map((card)=>(
-                <div className='bg-blue-50 rounded flex flex-col'>
+              {cards.map((card, index)=>(
+                <div key={index} className='bg-blue-50 rounded flex flex-col'>
                   <Image className='m-2'
                          src={card.src}
                          alt={card.alt}
