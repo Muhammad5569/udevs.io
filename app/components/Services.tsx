@@ -11,8 +11,8 @@ const Services = () => {
       <Mobile/>
       <ERPSystem/>
       <UserIX/>
+      <Optimazation/>
       <ITconsulting/>
-      {/* <Optimazation/> */}
     </>
     
   )

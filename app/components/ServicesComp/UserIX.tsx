@@ -20,22 +20,11 @@ const UserIX = () => {
     <div>
       <div className='container'>
         <h1 className='title py-16'>UI/UX Design</h1>
-        <div className='flex'>
+        <div className='flex justify-between gap-8'>
           <div className='w-1/2 pr-16'>
             <p className='text-2xl text-gray-700 py-4 leading-10'>Our company takes a human-centered approach to design</p>
             
-            <div className='grid grid-cols-3 gap-4'>
-              {cards.map(card => (
-                <div key={card.id} className='bg-blue-50 rounded flex flex-col'> {/* Highlight: key={card.id} */}
-                  <Image className='m-2'
-                         src={card.src}
-                         alt={card.alt}
-                         width={60}
-                         height={60}/>
-                  <p className='m-2 text-base font-semibold text-gray-700'>{card.title}</p>
-                </div>
-              ))}
-            </div>
+            
             
             <div className='grid grid-cols-3 gap-4 mt-8'>
               {cards.map(card => (
@@ -45,7 +34,7 @@ const UserIX = () => {
                          alt={card.alt}
                          width={60}
                          height={60}/>
-                  <p className='m-2 text-base font-semibold text-gray-700'>{card.title}</p>
+                  <p className='p-2 text-base font-semibold text-gray-700'>{card.title}</p>
                 </div>
               ))}
             </div>
@@ -54,8 +43,8 @@ const UserIX = () => {
             <div className='flex space-x-4 '>
               {texnoCards.map(card => (
                 <div key={card.id} className='w-1/3 h-20 rounded'> {/* Highlight: key={card.id} */}
-                  <Image className='m-2' src={card.src} alt={card.alt} width={60} height={60}/>
-                  <p className='m-2 text-xl'>{card.title}</p>
+                  <Image className='' src={card.src} alt={card.alt} width={50} height={50}/>
+                  <p className='text-xl'>{card.title}</p>
                 </div>
               ))}
             </div>
